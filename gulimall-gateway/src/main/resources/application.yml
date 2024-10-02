@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    loadbalancer:
+      ribbon:
+        enabled: false
+    gateway:
+      routes:
+        - id: after_route1
+          uri: https://www.baidu.com
+          predicates:
+            -  Query=url, baidu
+        - id: after_route2
+          uri: https://www.qq.com
+          predicates:
+            - Query=url, qq
+        - id: admin_route
+          uri: lb://renren-fast
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/(?<segment>.*), /renren-fast/$\{segment}
+## 前端项目都带上api前缀
+
+
+server:
+  port: 88

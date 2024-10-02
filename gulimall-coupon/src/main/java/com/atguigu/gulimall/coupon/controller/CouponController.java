@@ -30,6 +30,12 @@ import com.atguigu.common.utils.R;
 public class CouponController {
     @Autowired
     private CouponService couponService;
+    @RequestMapping("/member/list")
+    public  R  memberCoupons(){
+        CouponEntity couponEntity = new CouponEntity();
+        couponEntity.setCouponName("满100减10");
+        return R.ok().put("cupons",Arrays.asList(couponEntity));
+    }
 
     /**
      * 列表
