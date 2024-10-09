@@ -1,5 +1,7 @@
 package com.example.gulimall.product;
 
+import com.aliyun.oss.common.auth.CredentialsProviderFactory;
+import com.aliyun.oss.common.auth.EnvironmentVariableCredentialsProvider;
 import com.atguigu.gulimall.product.GulimallProductApplication;
 import com.atguigu.gulimall.product.entity.BrandEntity;
 import com.atguigu.gulimall.product.service.BrandService;
@@ -21,6 +23,10 @@ class GulimallProductApplicationTests {
         brandEntity.setDescript("描述");
         brandService.save(brandEntity);
         System.out.println("保存成功");
+    }
+    @Test
+    void testUpload(){
+
     }
 
 }

@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.atguigu.common.xss;
+package com.atguigu.common.validator.group.xss;
 
 
 import com.atguigu.common.exception.RRException;

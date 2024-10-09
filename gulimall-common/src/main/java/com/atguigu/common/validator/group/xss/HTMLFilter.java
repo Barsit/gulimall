@@ -1,4 +1,4 @@
-package com.atguigu.common.xss;
+package com.atguigu.common.validator.group.xss;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
